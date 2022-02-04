@@ -3,22 +3,22 @@ import './App.css';
 
 function App() {
   const dispatch = useDispatch();
-  const cash = useSelector(state => state.cash);
+  const cash = useSelector(state => state.cash.cash);
 
-  const addCash = () => {
-    dispatch({type:"ADD_CASH", payload: 5})
+  const addCash = (cash) => {
+    dispatch({type:"ADD_CASH", payload: cash})
   }
 
-  const getCash = () => {
-    dispatch({type:"GET_CASH", payload: 5})
+  const getCash = (cash) => {
+    dispatch({type:"GET_CASH", payload: cash})
   }
 
   return (
     <div className="App">
       <div className='cashDiv'>{cash}</div>
       <div className='buttonsDiv'>
-        <button onClick={() => addCash()}>Top up your account</button>
-        <button onClick={() => getCash()}>Withdraw money from the account</button>
+        <button onClick={() => addCash(Number(prompt()))}>Top up your account</button>
+        <button onClick={() => getCash(Number(prompt()))}>Withdraw money from the account</button>
       </div>
     </div>
   );
