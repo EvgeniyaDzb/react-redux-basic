@@ -1,10 +1,15 @@
 .App {
   text-align: center;
+  font-size: 3rem;
 }
 
 .buttonsDiv{
   display: flex;
 }
-.cashDiv{
-  font-size: 3rem;
+
+.customerName{
+  font-size: 2rem;
+  border: 1px solid black;
+  padding: 10px 20px;
+  margin-top: 5px;
 }
