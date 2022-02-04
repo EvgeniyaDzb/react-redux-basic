@@ -7,9 +7,9 @@ import { Provider } from 'react-redux';
 
 const defaultState = {
   cash: 0,
-}
+};
 
-const reducer = (state, action) => {
+const reducer = (state = defaultState, action) => {
   switch (action.type) {
     case "ADD_CASH":
       return { ...state, cash: state.cash + action.payload }
@@ -18,9 +18,9 @@ const reducer = (state, action) => {
     default:
       return state
   }
-}
+};
 
-const store = createStore(reducer)
+const store = createStore(reducer);
 
 ReactDOM.render(
   <Provider store={store}>
