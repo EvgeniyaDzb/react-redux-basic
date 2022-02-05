@@ -4,7 +4,7 @@
 
 - redux for state management
 - react-redux to provide store into components 
-- redux-thunk for asynchrony
+- redux-thunk for async query from database [jsonplaceholder](https://jsonplaceholder.typicode.com/users)
 
 # Environment
 - Node.js v16.0.0+
